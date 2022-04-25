@@ -18,4 +18,10 @@ def index():
     return render_template("index.html", value=mailgun_secret_key_value)
 
 
+@app.route('/schedule')
+def schedule():
+    # We will just display our mailgun secret key, nothing more.
+    return render_template("schedule.html", value=mailgun_secret_key_value)
+
+
 app.run(host='0.0.0.0', port=port, debug=True)
