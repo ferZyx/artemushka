@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template
 
-app = Flask('MyHerokuApp')
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 # Read the mailgun secret key from environment variables
 mailgun_secret_key_value = os.environ.get('MAILGUN_SECRET_KEY', None)
@@ -18,7 +18,7 @@ def index():
     return render_template("index.html", value=mailgun_secret_key_value)
 
 
-@app.route('/schedule')
+@app.route('/schedule/')
 def schedule():
     # We will just display our mailgun secret key, nothing more.
     return render_template("schedule.html", value=mailgun_secret_key_value)
