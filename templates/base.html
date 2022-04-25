@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}"/>
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+         <a class="experiment" href="/">
+             <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+         </a>
+    </div>
+    <ul>
+        <a class="nav_a" href="/">
+            <li class="li">Главная</li>
+        </a>
+        <a class="nav_a" href="#">
+            <li class="li">Неглавная</li>
+        </a>
+        <a class="nav_a" href="#">
+            <li class="li">Подглавная</li>
+        </a>
+        <a class="nav_a" href="#">
+            <li class="li">Надглавная</li>
+        </a>
+    </ul>
+
+</header>
+
+{% block tempContent %}{% endblock %}
+
+</body>
+</html>
