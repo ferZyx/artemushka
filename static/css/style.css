@@ -1,8 +1,8 @@
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
-
 
 /*Header */
 .header{
@@ -17,7 +17,7 @@ body{
 
 .logo{
     width:40%;
-    float:left;
+    text-align:left;
 }
 
 /*Header Navigation settings */
@@ -26,17 +26,18 @@ ul{
     padding:15px;
     width:40%;
     float:left;
-    align-content: center;
+
 }
 .li{
     color:white;
     padding:15px;
     display:inline-block;
     border:2px solid rgb(214, 56, 28);
+    max-width:80px;
 }
 a{
     text-decoration: none;
-    
+
 }
 
 li:hover{
@@ -45,12 +46,18 @@ li:hover{
 li:active{
     background-color: rgba(32, 28, 28, 0.589);
 }
-
+    button:hover{
+    background-color: rgb(22, 22, 22);
+}
+    button:active{
+    background-color: rgba(32, 28, 28, 0.589);
+}
 
 /*Main content */
 
-content{
-    width:100%;
+.for_button{
+    display:flex;
+
 }
 
 button{
@@ -61,4 +68,5 @@ button{
     color:white;
     width:15%;
     margin-top: 30px;
+    justify-self: center;
 }
